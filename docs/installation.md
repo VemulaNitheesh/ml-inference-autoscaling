@@ -51,3 +51,9 @@ v3.22.1+gd6c1a0e
 - Minikube (docker driver) did not apply a CPU limit with --cpus=4 (NanoCpus=0).
   Fixed with `docker update --cpus=4 minikube`. Kubernetes still advertises
   8 CPUs / ~15 GiB as node capacity; the real ceiling is the Docker limit.
+
+## Monitoring (installed 2026-11-24)
+- Release: monitoring (namespace: monitoring), chart kube-prometheus-stack 93.9.0
+- Values: kubernetes/monitoring/prometheus/values.yaml (lean: no Alertmanager/node-exporter)
+- Scrape interval 5s, retention 2d, storage emptyDir
+- Note: first install used a truncated values file (terminal paste error); fixed via helm upgrade.

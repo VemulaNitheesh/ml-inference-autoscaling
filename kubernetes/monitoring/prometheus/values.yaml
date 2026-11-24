@@ -1,0 +1,46 @@
+defaultRules:
+  create: false
+alertmanager:
+  enabled: false
+nodeExporter:
+  enabled: false
+kubeApiServer:
+  enabled: false
+kubeControllerManager:
+  enabled: false
+kubeScheduler:
+  enabled: false
+kubeEtcd:
+  enabled: false
+kubeProxy:
+  enabled: false
+coreDns:
+  enabled: false
+kubelet:
+  enabled: true
+  serviceMonitor:
+    interval: 10s
+kube-state-metrics:
+  resources:
+    requests: {cpu: 20m, memory: 50Mi}
+    limits: {cpu: 100m, memory: 150Mi}
+prometheusOperator:
+  resources:
+    requests: {cpu: 50m, memory: 100Mi}
+    limits: {cpu: 200m, memory: 200Mi}
+prometheus:
+  prometheusSpec:
+    scrapeInterval: 5s
+    evaluationInterval: 15s
+    retention: 2d
+    serviceMonitorSelectorNilUsesHelmValues: false
+    podMonitorSelectorNilUsesHelmValues: false
+    resources:
+      requests: {cpu: 200m, memory: 400Mi}
+      limits: {cpu: 1000m, memory: 1Gi}
+grafana:
+  adminPassword: "autoscale-lab"
+  defaultDashboardsEnabled: false
+  resources:
+    requests: {cpu: 50m, memory: 128Mi}
+    limits: {cpu: 300m, memory: 500Mi}
