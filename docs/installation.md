@@ -57,3 +57,9 @@ v3.22.1+gd6c1a0e
 - Values: kubernetes/monitoring/prometheus/values.yaml (lean: no Alertmanager/node-exporter)
 - Scrape interval 5s, retention 2d, storage emptyDir
 - Grafana memory limit raised to 500Mi in helm revision 2 (container-level limit; Pod total was ~320Mi across 3 containers).
+
+## Autoscaling components (installed 2026-11-24)
+- prometheus-adapter 5.4.2 (no rules yet; custom.metrics.k8s.io APIService not registered until a rule exists, to be verified in Milestone 7)
+- KEDA 2.21.1 (namespace: keda; external.metrics.k8s.io registered)
+- Python deps frozen in docs/requirements-freeze.txt
+- Note: import locust before other libraries in any process (gevent ssl monkey-patching)
