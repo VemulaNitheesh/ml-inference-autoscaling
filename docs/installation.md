@@ -56,4 +56,4 @@ v3.22.1+gd6c1a0e
 - Release: monitoring (namespace: monitoring), chart kube-prometheus-stack 93.9.0
 - Values: kubernetes/monitoring/prometheus/values.yaml (lean: no Alertmanager/node-exporter)
 - Scrape interval 5s, retention 2d, storage emptyDir
-- Note: first install used a truncated values file (terminal paste error); fixed via helm upgrade.
+- Grafana memory limit raised to 500Mi in helm revision 2 (container-level limit; Pod total was ~320Mi across 3 containers).
