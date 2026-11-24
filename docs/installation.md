@@ -25,3 +25,18 @@ Client Version: v1.35.10
 minikube version: v1.39.0
 ## Helm
 v3.22.1+gd6c1a0e
+
+## Pinned versions (decided at Milestone 1)
+- Minikube: v1.39.0
+- Kubernetes (cluster): v1.35.10 (matches kubectl client v1.35.10)
+- Container runtime: containerd (pinned explicitly, as the Minikube default changed in v1.39.0)
+- Minikube driver: docker
+- Minikube resources: 4 CPUs, 6144 MB RAM, 30 GB disk
+- Host power profile during experiments: performance
+- Jenkins stopped during experiments
+
+## Cluster components (observed at cluster creation)
+- containerd: 2.3.4
+- Minikube base image (kicbase): v0.0.51
+- Metrics Server: v0.9.0 (minikube addon)
+- Cluster created: 2026-11-24
