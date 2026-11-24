@@ -40,3 +40,14 @@ v3.22.1+gd6c1a0e
 - Minikube base image (kicbase): v0.0.51
 - Metrics Server: v0.9.0 (minikube addon)
 - Cluster created: 2026-11-24
+
+## Helm charts and tools (pinned 2026-11-24)
+- kube-prometheus-stack chart: 93.9.0 (operator v0.95.2)
+- prometheus-adapter chart: 5.4.2 (app v0.12.0)
+- KEDA chart: 2.21.1 (app 2.21.1)
+- Locust: 2.47.0
+
+## Known deviation / limitation
+- Minikube (docker driver) did not apply a CPU limit with --cpus=4 (NanoCpus=0).
+  Fixed with `docker update --cpus=4 minikube`. Kubernetes still advertises
+  8 CPUs / ~15 GiB as node capacity; the real ceiling is the Docker limit.
