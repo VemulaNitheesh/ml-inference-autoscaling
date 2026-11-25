@@ -1,0 +1,58 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: ml-inference
+  labels:
+    app: ml-inference
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: ml-inference
+
+  template:
+    metadata:
+      labels:
+        app: ml-inference
+
+    spec:
+      containers:
+        - name: ml-inference
+
+          image: ml-inference:milestone4
+
+          imagePullPolicy: Never
+
+          ports:
+            - containerPort: 8000
+
+          env:
+            - name: MAX_CONCURRENT_INFERENCES
+              value: "2"
+
+          resources:
+            requests:
+              cpu: 200m
+              memory: 256Mi
+
+            limits:
+              cpu: "1"
+              memory: 512Mi
+
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 5
+            periodSeconds: 5
+
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 15
+            periodSeconds: 10
+

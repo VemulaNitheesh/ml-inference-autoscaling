@@ -1,7 +1,32 @@
+# Python
 .venv/
+venv/
 __pycache__/
-*.pyc
-.ipynb_checkpoints/
+*.py[cod]
+*.egg-info/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.yaml
+kubeconfig
+
+# IDE
+.vscode/
+.idea/
+
+# OS
 .DS_Store
-results/raw/*
-!results/raw/.gitkeep
+Thumbs.db
+
+# Temporary files
+*.log
+*.tmp
+.cache/
+
+# Generated Python artifacts
+.pytest_cache/
+.mypy_cache/
