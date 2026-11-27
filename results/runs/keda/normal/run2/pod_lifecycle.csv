@@ -1,0 +1,5 @@
+pod,created_epoch,ready_epoch,terminating_seen_epoch,startup_s
+ml-inference-978f7d5c4-825tn,1795711189.0,1795711195.0,,6.0
+ml-inference-978f7d5c4-8tlwx,1795758794.0,1795758801.0,,7.0
+ml-inference-978f7d5c4-srs8r,1795758794.0,1795758801.0,,7.0
+ml-inference-978f7d5c4-vmzx8,1795758794.0,1795758801.0,,7.0

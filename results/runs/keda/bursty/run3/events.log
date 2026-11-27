@@ -1,0 +1,174 @@
+LAST SEEN   TYPE      REASON              OBJECT                                      MESSAGE
+55m         Normal    Killing             pod/ml-inference-978f7d5c4-vmzx8            Stopping container ml-inference
+55m         Normal    Killing             pod/ml-inference-978f7d5c4-8tlwx            Stopping container ml-inference
+55m         Normal    Killing             pod/ml-inference-978f7d5c4-srs8r            Stopping container ml-inference
+55m         Normal    SuccessfulDelete    replicaset/ml-inference-978f7d5c4           Deleted pod: ml-inference-978f7d5c4-vmzx8
+55m         Normal    SuccessfulDelete    replicaset/ml-inference-978f7d5c4           Deleted pod: ml-inference-978f7d5c4-8tlwx
+55m         Normal    SuccessfulDelete    replicaset/ml-inference-978f7d5c4           Deleted pod: ml-inference-978f7d5c4-srs8r
+54m         Normal    Scheduled           pod/ml-inference-978f7d5c4-n26cw            Successfully assigned default/ml-inference-978f7d5c4-n26cw to minikube
+54m         Normal    Scheduled           pod/ml-inference-978f7d5c4-m5b49            Successfully assigned default/ml-inference-978f7d5c4-m5b49 to minikube
+54m         Normal    Pulled              pod/ml-inference-978f7d5c4-m5b49            Container image "ml-inference:v2" already present on machine and can be accessed by the pod
+54m         Normal    SuccessfulCreate    replicaset/ml-inference-978f7d5c4           Created pod: ml-inference-978f7d5c4-5kdjd
+54m         Normal    Scheduled           pod/ml-inference-978f7d5c4-5kdjd            Successfully assigned default/ml-inference-978f7d5c4-5kdjd to minikube
+54m         Normal    Pulled              pod/ml-inference-978f7d5c4-5kdjd            Container image "ml-inference:v2" already present on machine and can be accessed by the pod
+54m         Normal    Pulled              pod/ml-inference-978f7d5c4-n26cw            Container image "ml-inference:v2" already present on machine and can be accessed by the pod
+54m         Normal    Started             pod/ml-inference-978f7d5c4-5kdjd            Container started
+54m         Normal    Started             pod/ml-inference-978f7d5c4-n26cw            Container started
+54m         Normal    Created             pod/ml-inference-978f7d5c4-m5b49            Container created
+54m         Normal    Created             pod/ml-inference-978f7d5c4-n26cw            Container created
+54m         Normal    Created             pod/ml-inference-978f7d5c4-5kdjd            Container created
+54m         Normal    Started             pod/ml-inference-978f7d5c4-m5b49            Container started
+48m         Warning   Unhealthy           pod/ml-inference-978f7d5c4-m5b49            Readiness probe failed: Traceback (most recent call last):...
+48m         Normal    Killing             pod/ml-inference-978f7d5c4-5kdjd            Stopping container ml-inference
+48m         Warning   Unhealthy           pod/ml-inference-978f7d5c4-5kdjd            Readiness probe failed: Traceback (most recent call last):...
+48m         Normal    Killing             pod/ml-inference-978f7d5c4-m5b49            Stopping container ml-inference
+48m         Normal    SuccessfulDelete    replicaset/ml-inference-978f7d5c4           Deleted pod: ml-inference-978f7d5c4-5kdjd
+48m         Normal    SuccessfulDelete    replicaset/ml-inference-978f7d5c4           Deleted pod: ml-inference-978f7d5c4-m5b49
+48m         Warning   Unhealthy           pod/ml-inference-978f7d5c4-n26cw            Readiness probe failed: Traceback (most recent call last):...
+48m         Normal    SuccessfulDelete    replicaset/ml-inference-978f7d5c4           Deleted pod: ml-inference-978f7d5c4-n26cw
+48m         Normal    Killing             pod/ml-inference-978f7d5c4-n26cw            Stopping container ml-inference
+45m         Normal    Scheduled           pod/ml-inference-978f7d5c4-8dpzj            Successfully assigned default/ml-inference-978f7d5c4-8dpzj to minikube
+45m         Normal    Pulled              pod/ml-inference-978f7d5c4-lgbpl            Container image "ml-inference:v2" already present on machine and can be accessed by the pod
+45m         Normal    Pulled              pod/ml-inference-978f7d5c4-8dpzj            Container image "ml-inference:v2" already present on machine and can be accessed by the pod
+45m         Normal    Created             pod/ml-inference-978f7d5c4-8dpzj            Container created
+45m         Normal    Started             pod/ml-inference-978f7d5c4-8dpzj            Container started
+45m         Normal    Created             pod/ml-inference-978f7d5c4-jfkjj            Container created
+45m         Normal    Scheduled           pod/ml-inference-978f7d5c4-jfkjj            Successfully assigned default/ml-inference-978f7d5c4-jfkjj to minikube
+45m         Normal    Started             pod/ml-inference-978f7d5c4-jfkjj            Container started
+45m         Normal    Started             pod/ml-inference-978f7d5c4-lgbpl            Container started
+45m         Normal    Created             pod/ml-inference-978f7d5c4-lgbpl            Container created
+45m         Normal    Pulled              pod/ml-inference-978f7d5c4-jfkjj            Container image "ml-inference:v2" already present on machine and can be accessed by the pod
+45m         Normal    Scheduled           pod/ml-inference-978f7d5c4-lgbpl            Successfully assigned default/ml-inference-978f7d5c4-lgbpl to minikube
+42m         Normal    Killing             pod/ml-inference-978f7d5c4-lgbpl            Stopping container ml-inference
+42m         Normal    Killing             pod/ml-inference-978f7d5c4-8dpzj            Stopping container ml-inference
+42m         Warning   Unhealthy           pod/ml-inference-978f7d5c4-lgbpl            Readiness probe failed: Traceback (most recent call last):...
+42m         Warning   Unhealthy           pod/ml-inference-978f7d5c4-8dpzj            Readiness probe failed: Traceback (most recent call last):...
+41m         Normal    Scheduled           pod/ml-inference-978f7d5c4-btgck            Successfully assigned default/ml-inference-978f7d5c4-btgck to minikube
+41m         Normal    Scheduled           pod/ml-inference-978f7d5c4-62p67            Successfully assigned default/ml-inference-978f7d5c4-62p67 to minikube
+41m         Normal    Created             pod/ml-inference-978f7d5c4-62p67            Container created
+41m         Normal    Started             pod/ml-inference-978f7d5c4-btgck            Container started
+41m         Normal    Created             pod/ml-inference-978f7d5c4-btgck            Container created
+41m         Normal    Pulled              pod/ml-inference-978f7d5c4-btgck            Container image "ml-inference:v2" already present on machine and can be accessed by the pod
+41m         Normal    Pulled              pod/ml-inference-978f7d5c4-62p67            Container image "ml-inference:v2" already present on machine and can be accessed by the pod
+41m         Normal    Started             pod/ml-inference-978f7d5c4-62p67            Container started
+38m         Normal    Killing             pod/ml-inference-978f7d5c4-btgck            Stopping container ml-inference
+38m         Normal    Killing             pod/ml-inference-978f7d5c4-62p67            Stopping container ml-inference
+38m         Warning   Unhealthy           pod/ml-inference-978f7d5c4-btgck            Readiness probe errored and resulted in unknown state: rpc error: code = Unknown desc = failed to exec in container: container is in CONTAINER_EXITED state
+38m         Warning   Unhealthy           pod/ml-inference-978f7d5c4-62p67            Readiness probe errored and resulted in unknown state: rpc error: code = Unknown desc = failed to exec in container: container is in CONTAINER_EXITED state
+37m         Normal    Created             pod/ml-inference-978f7d5c4-nkf74            Container created
+37m         Normal    Started             pod/ml-inference-978f7d5c4-9jm8l            Container started
+37m         Normal    Created             pod/ml-inference-978f7d5c4-9jm8l            Container created
+37m         Normal    Pulled              pod/ml-inference-978f7d5c4-9jm8l            Container image "ml-inference:v2" already present on machine and can be accessed by the pod
+37m         Normal    Scheduled           pod/ml-inference-978f7d5c4-9jm8l            Successfully assigned default/ml-inference-978f7d5c4-9jm8l to minikube
+37m         Normal    Pulled              pod/ml-inference-978f7d5c4-nkf74            Container image "ml-inference:v2" already present on machine and can be accessed by the pod
+37m         Normal    Scheduled           pod/ml-inference-978f7d5c4-nkf74            Successfully assigned default/ml-inference-978f7d5c4-nkf74 to minikube
+37m         Normal    Started             pod/ml-inference-978f7d5c4-nkf74            Container started
+34m         Normal    Killing             pod/ml-inference-978f7d5c4-9jm8l            Stopping container ml-inference
+34m         Normal    Killing             pod/ml-inference-978f7d5c4-nkf74            Stopping container ml-inference
+34m         Warning   Unhealthy           pod/ml-inference-978f7d5c4-nkf74            Readiness probe errored and resulted in unknown state: rpc error: code = Unknown desc = failed to exec in container: container is in CONTAINER_EXITED state
+34m         Warning   Unhealthy           pod/ml-inference-978f7d5c4-9jm8l            Readiness probe errored and resulted in unknown state: rpc error: code = Unknown desc = failed to exec in container: container is in CONTAINER_EXITED state
+32m         Normal    Killing             pod/ml-inference-978f7d5c4-jfkjj            Stopping container ml-inference
+28m         Normal    Scheduled           pod/ml-inference-978f7d5c4-f7v2h            Successfully assigned default/ml-inference-978f7d5c4-f7v2h to minikube
+28m         Normal    Scheduled           pod/ml-inference-978f7d5c4-xzpqg            Successfully assigned default/ml-inference-978f7d5c4-xzpqg to minikube
+28m         Normal    Scheduled           pod/ml-inference-978f7d5c4-7xc8h            Successfully assigned default/ml-inference-978f7d5c4-7xc8h to minikube
+28m         Normal    Created             pod/ml-inference-978f7d5c4-f7v2h            Container created
+28m         Normal    Created             pod/ml-inference-978f7d5c4-xzpqg            Container created
+28m         Normal    Started             pod/ml-inference-978f7d5c4-xzpqg            Container started
+28m         Normal    Started             pod/ml-inference-978f7d5c4-7xc8h            Container started
+28m         Normal    Created             pod/ml-inference-978f7d5c4-7xc8h            Container created
+28m         Normal    Pulled              pod/ml-inference-978f7d5c4-xzpqg            Container image "ml-inference:v2" already present on machine and can be accessed by the pod
+28m         Normal    Pulled              pod/ml-inference-978f7d5c4-f7v2h            Container image "ml-inference:v2" already present on machine and can be accessed by the pod
+28m         Normal    Pulled              pod/ml-inference-978f7d5c4-7xc8h            Container image "ml-inference:v2" already present on machine and can be accessed by the pod
+28m         Normal    Started             pod/ml-inference-978f7d5c4-f7v2h            Container started
+25m         Normal    Killing             pod/ml-inference-978f7d5c4-7xc8h            Stopping container ml-inference
+25m         Normal    ScalingReplicaSet   deployment/ml-inference                     Scaled down replica set ml-inference-978f7d5c4 from 4 to 1
+25m         Warning   Unhealthy           pod/ml-inference-978f7d5c4-f7v2h            Readiness probe failed:
+25m         Normal    Killing             pod/ml-inference-978f7d5c4-f7v2h            Stopping container ml-inference
+25m         Normal    Killing             pod/ml-inference-978f7d5c4-xzpqg            Stopping container ml-inference
+25m         Warning   Unhealthy           pod/ml-inference-978f7d5c4-7xc8h            Readiness probe failed:
+25m         Warning   Unhealthy           pod/ml-inference-978f7d5c4-xzpqg            Readiness probe failed:
+24m         Normal    Created             pod/ml-inference-978f7d5c4-92hwg            Container created
+24m         Normal    Started             pod/ml-inference-978f7d5c4-92hwg            Container started
+24m         Normal    Scheduled           pod/ml-inference-978f7d5c4-9tbxd            Successfully assigned default/ml-inference-978f7d5c4-9tbxd to minikube
+24m         Normal    Pulled              pod/ml-inference-978f7d5c4-9tbxd            Container image "ml-inference:v2" already present on machine and can be accessed by the pod
+24m         Normal    Created             pod/ml-inference-978f7d5c4-9tbxd            Container created
+24m         Normal    Started             pod/ml-inference-978f7d5c4-9tbxd            Container started
+24m         Normal    Started             pod/ml-inference-978f7d5c4-d55nq            Container started
+24m         Normal    Created             pod/ml-inference-978f7d5c4-d55nq            Container created
+24m         Normal    Pulled              pod/ml-inference-978f7d5c4-d55nq            Container image "ml-inference:v2" already present on machine and can be accessed by the pod
+24m         Normal    Scheduled           pod/ml-inference-978f7d5c4-d55nq            Successfully assigned default/ml-inference-978f7d5c4-d55nq to minikube
+24m         Normal    Scheduled           pod/ml-inference-978f7d5c4-92hwg            Successfully assigned default/ml-inference-978f7d5c4-92hwg to minikube
+24m         Normal    Pulled              pod/ml-inference-978f7d5c4-92hwg            Container image "ml-inference:v2" already present on machine and can be accessed by the pod
+21m         Normal    Killing             pod/ml-inference-978f7d5c4-9tbxd            Stopping container ml-inference
+21m         Normal    Killing             pod/ml-inference-978f7d5c4-d55nq            Stopping container ml-inference
+21m         Warning   Unhealthy           pod/ml-inference-978f7d5c4-d55nq            Readiness probe errored and resulted in unknown state: rpc error: code = Unknown desc = failed to exec in container: container is in CONTAINER_EXITED state
+21m         Warning   Unhealthy           pod/ml-inference-978f7d5c4-9tbxd            Readiness probe errored and resulted in unknown state: rpc error: code = Unknown desc = failed to exec in container: container is in CONTAINER_EXITED state
+20m         Normal    Scheduled           pod/ml-inference-978f7d5c4-htxnk            Successfully assigned default/ml-inference-978f7d5c4-htxnk to minikube
+20m         Normal    Scheduled           pod/ml-inference-978f7d5c4-56bbc            Successfully assigned default/ml-inference-978f7d5c4-56bbc to minikube
+20m         Normal    ScalingReplicaSet   deployment/ml-inference                     Scaled up replica set ml-inference-978f7d5c4 from 2 to 4
+20m         Normal    Started             pod/ml-inference-978f7d5c4-htxnk            Container started
+20m         Normal    Pulled              pod/ml-inference-978f7d5c4-56bbc            Container image "ml-inference:v2" already present on machine and can be accessed by the pod
+20m         Normal    Started             pod/ml-inference-978f7d5c4-56bbc            Container started
+20m         Normal    Created             pod/ml-inference-978f7d5c4-56bbc            Container created
+20m         Normal    Pulled              pod/ml-inference-978f7d5c4-htxnk            Container image "ml-inference:v2" already present on machine and can be accessed by the pod
+20m         Normal    Created             pod/ml-inference-978f7d5c4-htxnk            Container created
+17m         Normal    Killing             pod/ml-inference-978f7d5c4-htxnk            Stopping container ml-inference
+17m         Warning   Unhealthy           pod/ml-inference-978f7d5c4-56bbc            Readiness probe errored and resulted in unknown state: rpc error: code = Unknown desc = failed to exec in container: container is in CONTAINER_EXITED state
+17m         Normal    Killing             pod/ml-inference-978f7d5c4-56bbc            Stopping container ml-inference
+15m         Normal    Killing             pod/ml-inference-978f7d5c4-92hwg            Stopping container ml-inference
+15m         Warning   Unhealthy           pod/ml-inference-978f7d5c4-92hwg            Readiness probe failed: Traceback (most recent call last):...
+11m         Normal    Started             pod/ml-inference-978f7d5c4-d79fs            Container started
+11m         Normal    Scheduled           pod/ml-inference-978f7d5c4-d68vp            Successfully assigned default/ml-inference-978f7d5c4-d68vp to minikube
+11m         Normal    Created             pod/ml-inference-978f7d5c4-d68vp            Container created
+11m         Normal    Pulled              pod/ml-inference-978f7d5c4-d79fs            Container image "ml-inference:v2" already present on machine and can be accessed by the pod
+11m         Normal    Pulled              pod/ml-inference-978f7d5c4-d68vp            Container image "ml-inference:v2" already present on machine and can be accessed by the pod
+11m         Normal    Scheduled           pod/ml-inference-978f7d5c4-d79fs            Successfully assigned default/ml-inference-978f7d5c4-d79fs to minikube
+11m         Normal    Created             pod/ml-inference-978f7d5c4-thxh2            Container created
+11m         Normal    Pulled              pod/ml-inference-978f7d5c4-thxh2            Container image "ml-inference:v2" already present on machine and can be accessed by the pod
+11m         Normal    Scheduled           pod/ml-inference-978f7d5c4-thxh2            Successfully assigned default/ml-inference-978f7d5c4-thxh2 to minikube
+11m         Normal    Created             pod/ml-inference-978f7d5c4-d79fs            Container created
+11m         Normal    SuccessfulCreate    replicaset/ml-inference-978f7d5c4           (combined from similar events): Created pod: ml-inference-978f7d5c4-d79fs
+11m         Normal    Started             pod/ml-inference-978f7d5c4-d68vp            Container started
+11m         Normal    Started             pod/ml-inference-978f7d5c4-thxh2            Container started
+9m7s        Normal    Killing             pod/ml-inference-978f7d5c4-thxh2            Stopping container ml-inference
+9m7s        Normal    Killing             pod/ml-inference-978f7d5c4-d79fs            Stopping container ml-inference
+9m6s        Warning   Unhealthy           pod/ml-inference-978f7d5c4-thxh2            Readiness probe errored and resulted in unknown state: rpc error: code = Unknown desc = failed to exec in container: container is in CONTAINER_EXITED state
+8m7s        Normal    Killing             pod/ml-inference-978f7d5c4-d68vp            Stopping container ml-inference
+8m6s        Warning   Unhealthy           pod/ml-inference-978f7d5c4-d68vp            Readiness probe errored and resulted in unknown state: rpc error: code = NotFound desc = failed to exec in container: failed to create exec "3d8c348990c1d0ffdc3353caba6fb4199809fe696e1a26c199b54bb57bf89d05": task a0c713204ad1f6d19cd2537ba5cb1fdfa1115d733903312b8ce79656bc3b502b not found
+7m52s       Normal    Scheduled           pod/ml-inference-978f7d5c4-h6ndq            Successfully assigned default/ml-inference-978f7d5c4-h6ndq to minikube
+7m52s       Normal    Scheduled           pod/ml-inference-978f7d5c4-kwj5g            Successfully assigned default/ml-inference-978f7d5c4-kwj5g to minikube
+7m52s       Normal    Scheduled           pod/ml-inference-978f7d5c4-8qtlz            Successfully assigned default/ml-inference-978f7d5c4-8qtlz to minikube
+7m51s       Normal    Created             pod/ml-inference-978f7d5c4-8qtlz            Container created
+7m51s       Normal    Started             pod/ml-inference-978f7d5c4-8qtlz            Container started
+7m51s       Normal    Pulled              pod/ml-inference-978f7d5c4-h6ndq            Container image "ml-inference:v2" already present on machine and can be accessed by the pod
+7m51s       Normal    Created             pod/ml-inference-978f7d5c4-h6ndq            Container created
+7m51s       Normal    Started             pod/ml-inference-978f7d5c4-h6ndq            Container started
+7m51s       Normal    Pulled              pod/ml-inference-978f7d5c4-8qtlz            Container image "ml-inference:v2" already present on machine and can be accessed by the pod
+7m51s       Normal    Started             pod/ml-inference-978f7d5c4-kwj5g            Container started
+7m51s       Normal    Created             pod/ml-inference-978f7d5c4-kwj5g            Container created
+7m51s       Normal    Pulled              pod/ml-inference-978f7d5c4-kwj5g            Container image "ml-inference:v2" already present on machine and can be accessed by the pod
+5m6s        Normal    Killing             pod/ml-inference-978f7d5c4-kwj5g            Stopping container ml-inference
+5m6s        Normal    Killing             pod/ml-inference-978f7d5c4-8qtlz            Stopping container ml-inference
+4m21s       Normal    SuccessfulDelete    replicaset/ml-inference-978f7d5c4           (combined from similar events): Deleted pod: ml-inference-978f7d5c4-h6ndq
+4m21s       Normal    Killing             pod/ml-inference-978f7d5c4-h6ndq            Stopping container ml-inference
+3m51s       Normal    Scheduled           pod/ml-inference-978f7d5c4-jzhb7            Successfully assigned default/ml-inference-978f7d5c4-jzhb7 to minikube
+3m51s       Normal    Started             pod/ml-inference-978f7d5c4-c9sg6            Container started
+3m51s       Normal    Pulled              pod/ml-inference-978f7d5c4-c9sg6            Container image "ml-inference:v2" already present on machine and can be accessed by the pod
+3m51s       Normal    Started             pod/ml-inference-978f7d5c4-7jzxm            Container started
+3m51s       Normal    Created             pod/ml-inference-978f7d5c4-7jzxm            Container created
+3m51s       Normal    Pulled              pod/ml-inference-978f7d5c4-7jzxm            Container image "ml-inference:v2" already present on machine and can be accessed by the pod
+3m51s       Normal    Scheduled           pod/ml-inference-978f7d5c4-7jzxm            Successfully assigned default/ml-inference-978f7d5c4-7jzxm to minikube
+3m51s       Normal    Created             pod/ml-inference-978f7d5c4-jzhb7            Container created
+3m51s       Normal    Pulled              pod/ml-inference-978f7d5c4-jzhb7            Container image "ml-inference:v2" already present on machine and can be accessed by the pod
+3m51s       Normal    ScalingReplicaSet   deployment/ml-inference                     Scaled up replica set ml-inference-978f7d5c4 from 1 to 4
+3m51s       Normal    Started             pod/ml-inference-978f7d5c4-jzhb7            Container started
+3m51s       Normal    Scheduled           pod/ml-inference-978f7d5c4-c9sg6            Successfully assigned default/ml-inference-978f7d5c4-c9sg6 to minikube
+3m51s       Normal    Created             pod/ml-inference-978f7d5c4-c9sg6            Container created
+3m51s       Normal    SuccessfulRescale   horizontalpodautoscaler/ml-inference-keda   New size: 4; reason: external metric s0-prometheus(&LabelSelector{MatchLabels:map[string]string{scaledobject.keda.sh/name: ml-inference-keda,},MatchExpressions:[]LabelSelectorRequirement{},}) above target
+66s         Normal    SuccessfulRescale   horizontalpodautoscaler/ml-inference-keda   New size: 2; reason: All metrics below target
+66s         Normal    Killing             pod/ml-inference-978f7d5c4-jzhb7            Stopping container ml-inference
+66s         Normal    Killing             pod/ml-inference-978f7d5c4-7jzxm            Stopping container ml-inference
+66s         Normal    ScalingReplicaSet   deployment/ml-inference                     Scaled down replica set ml-inference-978f7d5c4 from 4 to 2
+21s         Normal    SuccessfulRescale   horizontalpodautoscaler/ml-inference-keda   New size: 1; reason: All metrics below target
+21s         Normal    Killing             pod/ml-inference-978f7d5c4-c9sg6            Stopping container ml-inference
+21s         Normal    ScalingReplicaSet   deployment/ml-inference                     Scaled down replica set ml-inference-978f7d5c4 from 2 to 1

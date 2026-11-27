@@ -1,0 +1,99 @@
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"keda.sh/v1alpha1","kind":"ScaledObject","metadata":{"annotations":{},"name":"ml-inference-keda","namespace":"default"},"spec":{"advanced":{"horizontalPodAutoscalerConfig":{"behavior":{"scaleDown":{"policies":[{"periodSeconds":15,"type":"Percent","value":100}],"selectPolicy":"Max","stabilizationWindowSeconds":120},"scaleUp":{"policies":[{"periodSeconds":15,"type":"Pods","value":4},{"periodSeconds":15,"type":"Percent","value":100}],"selectPolicy":"Max","stabilizationWindowSeconds":0}},"name":"ml-inference-keda"}},"cooldownPeriod":120,"maxReplicaCount":4,"minReplicaCount":1,"pollingInterval":5,"scaleTargetRef":{"name":"ml-inference"},"triggers":[{"metadata":{"metricName":"inference_requests_in_flight","query":"sum(inference_requests_in_flight{job=\"ml-inference\"})","serverAddress":"http://prom-kube-prometheus-stack-prometheus.monitoring.svc.cluster.local:9090","threshold":"5"},"metricType":"AverageValue","type":"prometheus"}]}}
+  creationTimestamp: "2026-11-27T05:35:58Z"
+  generation: 1
+  labels:
+    app.kubernetes.io/managed-by: keda-operator
+    app.kubernetes.io/name: ml-inference-keda
+    app.kubernetes.io/part-of: ml-inference-keda
+    app.kubernetes.io/version: 2.21.1
+    scaledobject.keda.sh/name: ml-inference-keda
+  name: ml-inference-keda
+  namespace: default
+  ownerReferences:
+  - apiVersion: keda.sh/v1alpha1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ScaledObject
+    name: ml-inference-keda
+    uid: 20bb76ec-fe20-4a1a-89c8-c7aa8532de35
+  resourceVersion: "50745"
+  uid: 4ca30ba5-2a57-42cb-9f71-6f3bda96d541
+spec:
+  behavior:
+    scaleDown:
+      policies:
+      - periodSeconds: 15
+        type: Percent
+        value: 100
+      selectPolicy: Max
+      stabilizationWindowSeconds: 120
+    scaleUp:
+      policies:
+      - periodSeconds: 15
+        type: Pods
+        value: 4
+      - periodSeconds: 15
+        type: Percent
+        value: 100
+      selectPolicy: Max
+      stabilizationWindowSeconds: 0
+  maxReplicas: 4
+  metrics:
+  - external:
+      metric:
+        name: s0-prometheus
+        selector:
+          matchLabels:
+            scaledobject.keda.sh/name: ml-inference-keda
+      target:
+        averageValue: "5"
+        type: AverageValue
+    type: External
+  minReplicas: 1
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: ml-inference
+status:
+  conditions:
+  - lastTransitionTime: "2026-11-27T05:35:58Z"
+    message: recommended size matches current size
+    reason: ReadyForNewScale
+    status: "True"
+    type: AbleToScale
+  - lastTransitionTime: "2026-11-27T05:35:58Z"
+    message: 'the HPA was able to successfully calculate a replica count from external
+      metric s0-prometheus(&LabelSelector{MatchLabels:map[string]string{scaledobject.keda.sh/name:
+      ml-inference-keda,},MatchExpressions:[]LabelSelectorRequirement{},})'
+    reason: ValidMetricFound
+    status: "True"
+    type: ScalingActive
+  - lastTransitionTime: "2026-11-27T06:22:02Z"
+    message: the desired replica count is less than the minimum replica count
+    reason: TooFewReplicas
+    status: "True"
+    type: ScalingLimited
+  - lastTransitionTime: "2026-11-27T05:38:43Z"
+    message: the HPA controller did not scale the workload to zero
+    reason: NotScaledToZero
+    status: "False"
+    type: ScaledToZero
+  currentMetrics:
+  - external:
+      current:
+        averageValue: "0"
+      metric:
+        name: s0-prometheus
+        selector:
+          matchLabels:
+            scaledobject.keda.sh/name: ml-inference-keda
+    type: External
+  currentReplicas: 1
+  desiredReplicas: 1
+  lastScaleTime: "2026-11-27T06:22:02Z"
+  observedGeneration: 1

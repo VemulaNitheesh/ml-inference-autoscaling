@@ -1,0 +1,33 @@
+{
+  "requests": 15733,
+  "failures": 0,
+  "failure_rate": 0.0,
+  "avg_ms": 596.815921947499,
+  "p50_ms": 31.1,
+  "p95_ms": 2424.66,
+  "p99_ms": 2844.344,
+  "max_ms": 3807.8,
+  "throughput_rps": 65.59562857565045,
+  "slo_violation_rate": 0.2868492976546113,
+  "load_duration_s": 239.84829998016357,
+  "scale_response_s_per_step": [
+    17.620266675949097
+  ],
+  "scale_response_mean_s": 17.620266675949097,
+  "peak_replicas": 4,
+  "peak_pods": 4,
+  "time_to_peak_s": 33.62105941772461,
+  "time_to_peak_definition": "seconds from first request timestamp to first observed peak replica count",
+  "scale_down_s": 139.79442858695984,
+  "direction_changes": 1,
+  "replica_minutes": 23.66811962922414,
+  "cpu_util_pct_mean": 105.46000000000001,
+  "cpu_util_pct_max": 142.4,
+  "mem_mi_per_pod_mean": 108.45625,
+  "mem_mi_per_pod_max": 121.0,
+  "inflight_mean": 37.016666666666666,
+  "inflight_max": 53.0,
+  "pod_startup_mean_s": 6.0,
+  "pod_startup_max_s": 6.0,
+  "overshoot_pods": 0
+}

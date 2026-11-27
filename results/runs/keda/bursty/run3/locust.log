@@ -1,0 +1,27 @@
+[2026-11-27 12:09:17,666] nitheeshvemula/INFO/locust.main: Starting Locust 2.47.0
+[2026-11-27 12:09:17,666] nitheeshvemula/INFO/locust.runners: Shape test starting.
+[2026-11-27 12:09:17,666] nitheeshvemula/INFO/locust.runners: Shape worker starting
+[2026-11-27 12:09:17,667] nitheeshvemula/INFO/locust.runners: Shape test updating to 4 users at 50.00 spawn rate
+[2026-11-27 12:09:17,667] nitheeshvemula/INFO/locust.runners: Ramping to 4 users at a rate of 50.00 per second
+[2026-11-27 12:09:17,667] nitheeshvemula/INFO/locust.runners: All users spawned: {"InferenceUser": 4} (4 total users)
+[2026-11-27 12:12:18,033] nitheeshvemula/INFO/locust.runners: Shape test updating to 40 users at 50.00 spawn rate
+[2026-11-27 12:12:18,034] nitheeshvemula/INFO/locust.runners: Ramping to 40 users at a rate of 50.00 per second
+[2026-11-27 12:12:18,039] nitheeshvemula/INFO/locust.runners: All users spawned: {"InferenceUser": 40} (40 total users)
+[2026-11-27 12:13:18,180] nitheeshvemula/INFO/locust.runners: Shape test updating to 4 users at 50.00 spawn rate
+[2026-11-27 12:13:18,180] nitheeshvemula/INFO/locust.runners: Ramping to 4 users at a rate of 50.00 per second
+[2026-11-27 12:13:18,189] nitheeshvemula/INFO/locust.runners: All users spawned: {"InferenceUser": 4} (4 total users)
+[2026-11-27 12:16:18,568] nitheeshvemula/INFO/locust.runners: Shape test updating to 40 users at 50.00 spawn rate
+[2026-11-27 12:16:18,568] nitheeshvemula/INFO/locust.runners: Ramping to 40 users at a rate of 50.00 per second
+[2026-11-27 12:16:18,570] nitheeshvemula/INFO/locust.runners: All users spawned: {"InferenceUser": 40} (40 total users)
+[2026-11-27 12:17:17,716] nitheeshvemula/INFO/locust.runners: Shape test updating to 4 users at 50.00 spawn rate
+[2026-11-27 12:17:17,716] nitheeshvemula/INFO/locust.runners: Ramping to 4 users at a rate of 50.00 per second
+[2026-11-27 12:17:17,721] nitheeshvemula/INFO/locust.runners: All users spawned: {"InferenceUser": 4} (4 total users)
+[2026-11-27 12:20:18,194] nitheeshvemula/INFO/locust.runners: Shape test updating to 40 users at 50.00 spawn rate
+[2026-11-27 12:20:18,194] nitheeshvemula/INFO/locust.runners: Ramping to 40 users at a rate of 50.00 per second
+[2026-11-27 12:20:18,200] nitheeshvemula/INFO/locust.runners: All users spawned: {"InferenceUser": 40} (40 total users)
+[2026-11-27 12:21:18,382] nitheeshvemula/INFO/locust.runners: Shape test updating to 4 users at 50.00 spawn rate
+[2026-11-27 12:21:18,383] nitheeshvemula/INFO/locust.runners: Ramping to 4 users at a rate of 50.00 per second
+[2026-11-27 12:21:18,393] nitheeshvemula/INFO/locust.runners: All users spawned: {"InferenceUser": 4} (4 total users)
+[2026-11-27 12:24:17,836] nitheeshvemula/INFO/locust.runners: Shape test stopping
+[2026-11-27 12:24:17,853] nitheeshvemula/INFO/locust.main: Shape test completed, shutting down
+[2026-11-27 12:24:17,889] nitheeshvemula/INFO/locust.main: Shutting down (exit code 0)

@@ -1,0 +1,98 @@
+LAST SEEN   TYPE      REASON               OBJECT                                      MESSAGE
+29m         Normal    KEDAScalerInfo       scaledobject/ml-inference-keda              PollingInterval is configured but is not relevant for scaling. It only affects scaling when minReplicaCount = 0, idleReplicaCount is set, or useCachedMetrics is enabled, but it still controls how often KEDA refreshes the ScaledObject status conditions and events
+29m         Normal    KEDAScalersStarted   scaledobject/ml-inference-keda              Scaler prometheus is built
+29m         Normal    KEDAScalersStarted   scaledobject/ml-inference-keda              Started scalers watch
+29m         Normal    KEDAScalerInfo       scaledobject/ml-inference-keda              PollingInterval is configured but is not relevant for scaling. It only affects scaling when minReplicaCount = 0, idleReplicaCount is set, or useCachedMetrics is enabled, but it still controls how often KEDA refreshes the ScaledObject status conditions and events
+29m         Normal    KEDAScalerInfo       scaledobject/ml-inference-keda              PollingInterval is configured but is not relevant for scaling. It only affects scaling when minReplicaCount = 0, idleReplicaCount is set, or useCachedMetrics is enabled, but it still controls how often KEDA refreshes the ScaledObject status conditions and events
+29m         Normal    ScaledObjectReady    scaledobject/ml-inference-keda              ScaledObject is ready for scaling
+29m         Normal    ScaledObjectReady    scaledobject/ml-inference-keda              ScaledObject is ready for scaling
+35m         Normal    SuccessfulRescale    horizontalpodautoscaler/ml-inference-cpu    New size: 2; reason: cpu resource utilization (percentage of request) above target
+35m         Normal    Scheduled            pod/ml-inference-978f7d5c4-wddm8            Successfully assigned default/ml-inference-978f7d5c4-wddm8 to minikube
+35m         Normal    Pulled               pod/ml-inference-978f7d5c4-wddm8            Container image "ml-inference:v2" already present on machine and can be accessed by the pod
+35m         Normal    SuccessfulCreate     replicaset/ml-inference-978f7d5c4           Created pod: ml-inference-978f7d5c4-wddm8
+35m         Normal    Started              pod/ml-inference-978f7d5c4-wddm8            Container started
+35m         Normal    Created              pod/ml-inference-978f7d5c4-wddm8            Container created
+32m         Normal    Killing              pod/ml-inference-978f7d5c4-wddm8            Stopping container ml-inference
+32m         Normal    SuccessfulRescale    horizontalpodautoscaler/ml-inference-cpu    New size: 1; reason: All metrics below target
+32m         Normal    SuccessfulDelete     replicaset/ml-inference-978f7d5c4           Deleted pod: ml-inference-978f7d5c4-wddm8
+27m         Normal    Scheduled            pod/ml-inference-978f7d5c4-wrgpf            Successfully assigned default/ml-inference-978f7d5c4-wrgpf to minikube
+27m         Normal    ScalingReplicaSet    deployment/ml-inference                     Scaled up replica set ml-inference-978f7d5c4 from 1 to 2
+27m         Normal    SuccessfulCreate     replicaset/ml-inference-978f7d5c4           Created pod: ml-inference-978f7d5c4-wrgpf
+27m         Normal    SuccessfulRescale    horizontalpodautoscaler/ml-inference-keda   New size: 2; reason: external metric s0-prometheus(&LabelSelector{MatchLabels:map[string]string{scaledobject.keda.sh/name: ml-inference-keda,},MatchExpressions:[]LabelSelectorRequirement{},}) above target
+27m         Normal    Pulled               pod/ml-inference-978f7d5c4-wrgpf            Container image "ml-inference:v2" already present on machine and can be accessed by the pod
+27m         Normal    Created              pod/ml-inference-978f7d5c4-wrgpf            Container created
+27m         Normal    Started              pod/ml-inference-978f7d5c4-wrgpf            Container started
+27m         Warning   Unhealthy            pod/ml-inference-978f7d5c4-wrgpf            Readiness probe failed: Traceback (most recent call last):...
+24m         Normal    Killing              pod/ml-inference-978f7d5c4-wrgpf            Stopping container ml-inference
+24m         Normal    SuccessfulDelete     replicaset/ml-inference-978f7d5c4           Deleted pod: ml-inference-978f7d5c4-wrgpf
+24m         Normal    ScalingReplicaSet    deployment/ml-inference                     Scaled down replica set ml-inference-978f7d5c4 from 2 to 1
+24m         Warning   Unhealthy            pod/ml-inference-978f7d5c4-wrgpf            Readiness probe errored and resulted in unknown state: rpc error: code = NotFound desc = failed to exec in container: failed to create exec "0381c98760db568c2563100b6c50802c7762462be5c1713706af3bf84741442e": task a85821276927ccce9056c9c2195cb9aadfd431ab878e24170fb3d91896d6db00 not found
+19m         Normal    Scheduled            pod/ml-inference-978f7d5c4-5fh2z            Successfully assigned default/ml-inference-978f7d5c4-5fh2z to minikube
+19m         Normal    Pulled               pod/ml-inference-978f7d5c4-kqv2l            Container image "ml-inference:v2" already present on machine and can be accessed by the pod
+19m         Normal    Scheduled            pod/ml-inference-978f7d5c4-kqv2l            Successfully assigned default/ml-inference-978f7d5c4-kqv2l to minikube
+19m         Normal    SuccessfulCreate     replicaset/ml-inference-978f7d5c4           Created pod: ml-inference-978f7d5c4-5fh2z
+19m         Normal    Scheduled            pod/ml-inference-978f7d5c4-bmjmn            Successfully assigned default/ml-inference-978f7d5c4-bmjmn to minikube
+19m         Normal    SuccessfulCreate     replicaset/ml-inference-978f7d5c4           Created pod: ml-inference-978f7d5c4-kqv2l
+19m         Normal    SuccessfulCreate     replicaset/ml-inference-978f7d5c4           Created pod: ml-inference-978f7d5c4-bmjmn
+19m         Normal    Pulled               pod/ml-inference-978f7d5c4-5fh2z            Container image "ml-inference:v2" already present on machine and can be accessed by the pod
+19m         Normal    Started              pod/ml-inference-978f7d5c4-kqv2l            Container started
+19m         Normal    Pulled               pod/ml-inference-978f7d5c4-bmjmn            Container image "ml-inference:v2" already present on machine and can be accessed by the pod
+19m         Normal    Created              pod/ml-inference-978f7d5c4-5fh2z            Container created
+19m         Normal    Started              pod/ml-inference-978f7d5c4-5fh2z            Container started
+19m         Normal    Created              pod/ml-inference-978f7d5c4-kqv2l            Container created
+19m         Normal    Started              pod/ml-inference-978f7d5c4-bmjmn            Container started
+19m         Normal    Created              pod/ml-inference-978f7d5c4-bmjmn            Container created
+13m         Normal    Killing              pod/ml-inference-978f7d5c4-5fh2z            Stopping container ml-inference
+13m         Normal    SuccessfulDelete     replicaset/ml-inference-978f7d5c4           Deleted pod: ml-inference-978f7d5c4-bmjmn
+13m         Normal    SuccessfulDelete     replicaset/ml-inference-978f7d5c4           Deleted pod: ml-inference-978f7d5c4-5fh2z
+13m         Normal    SuccessfulDelete     replicaset/ml-inference-978f7d5c4           Deleted pod: ml-inference-978f7d5c4-kqv2l
+13m         Normal    Killing              pod/ml-inference-978f7d5c4-bmjmn            Stopping container ml-inference
+13m         Normal    Killing              pod/ml-inference-978f7d5c4-kqv2l            Stopping container ml-inference
+12m         Normal    SuccessfulCreate     replicaset/ml-inference-978f7d5c4           Created pod: ml-inference-978f7d5c4-vmzx8
+12m         Normal    Pulled               pod/ml-inference-978f7d5c4-8tlwx            Container image "ml-inference:v2" already present on machine and can be accessed by the pod
+12m         Normal    Created              pod/ml-inference-978f7d5c4-vmzx8            Container created
+12m         Normal    Scheduled            pod/ml-inference-978f7d5c4-srs8r            Successfully assigned default/ml-inference-978f7d5c4-srs8r to minikube
+12m         Normal    Pulled               pod/ml-inference-978f7d5c4-srs8r            Container image "ml-inference:v2" already present on machine and can be accessed by the pod
+12m         Normal    Created              pod/ml-inference-978f7d5c4-srs8r            Container created
+12m         Normal    Scheduled            pod/ml-inference-978f7d5c4-8tlwx            Successfully assigned default/ml-inference-978f7d5c4-8tlwx to minikube
+12m         Normal    Created              pod/ml-inference-978f7d5c4-8tlwx            Container created
+12m         Normal    SuccessfulCreate     replicaset/ml-inference-978f7d5c4           Created pod: ml-inference-978f7d5c4-8tlwx
+12m         Normal    SuccessfulCreate     replicaset/ml-inference-978f7d5c4           Created pod: ml-inference-978f7d5c4-srs8r
+12m         Normal    Started              pod/ml-inference-978f7d5c4-srs8r            Container started
+12m         Normal    Scheduled            pod/ml-inference-978f7d5c4-vmzx8            Successfully assigned default/ml-inference-978f7d5c4-vmzx8 to minikube
+12m         Normal    Pulled               pod/ml-inference-978f7d5c4-vmzx8            Container image "ml-inference:v2" already present on machine and can be accessed by the pod
+12m         Normal    Started              pod/ml-inference-978f7d5c4-8tlwx            Container started
+12m         Normal    Started              pod/ml-inference-978f7d5c4-vmzx8            Container started
+6m52s       Normal    SuccessfulDelete     replicaset/ml-inference-978f7d5c4           Deleted pod: ml-inference-978f7d5c4-vmzx8
+6m52s       Normal    Killing              pod/ml-inference-978f7d5c4-8tlwx            Stopping container ml-inference
+6m52s       Normal    Killing              pod/ml-inference-978f7d5c4-vmzx8            Stopping container ml-inference
+6m52s       Normal    SuccessfulDelete     replicaset/ml-inference-978f7d5c4           Deleted pod: ml-inference-978f7d5c4-srs8r
+6m52s       Normal    SuccessfulDelete     replicaset/ml-inference-978f7d5c4           Deleted pod: ml-inference-978f7d5c4-8tlwx
+6m52s       Normal    Killing              pod/ml-inference-978f7d5c4-srs8r            Stopping container ml-inference
+6m7s        Normal    Scheduled            pod/ml-inference-978f7d5c4-n26cw            Successfully assigned default/ml-inference-978f7d5c4-n26cw to minikube
+6m7s        Normal    Scheduled            pod/ml-inference-978f7d5c4-m5b49            Successfully assigned default/ml-inference-978f7d5c4-m5b49 to minikube
+6m7s        Normal    Pulled               pod/ml-inference-978f7d5c4-m5b49            Container image "ml-inference:v2" already present on machine and can be accessed by the pod
+6m7s        Normal    SuccessfulRescale    horizontalpodautoscaler/ml-inference-keda   New size: 4; reason: external metric s0-prometheus(&LabelSelector{MatchLabels:map[string]string{scaledobject.keda.sh/name: ml-inference-keda,},MatchExpressions:[]LabelSelectorRequirement{},}) above target
+6m7s        Normal    Pulled               pod/ml-inference-978f7d5c4-5kdjd            Container image "ml-inference:v2" already present on machine and can be accessed by the pod
+6m7s        Normal    ScalingReplicaSet    deployment/ml-inference                     Scaled up replica set ml-inference-978f7d5c4 from 1 to 4
+6m7s        Normal    SuccessfulCreate     replicaset/ml-inference-978f7d5c4           Created pod: ml-inference-978f7d5c4-5kdjd
+6m7s        Normal    SuccessfulCreate     replicaset/ml-inference-978f7d5c4           (combined from similar events): Created pod: ml-inference-978f7d5c4-n26cw
+6m7s        Normal    Scheduled            pod/ml-inference-978f7d5c4-5kdjd            Successfully assigned default/ml-inference-978f7d5c4-5kdjd to minikube
+6m6s        Normal    Pulled               pod/ml-inference-978f7d5c4-n26cw            Container image "ml-inference:v2" already present on machine and can be accessed by the pod
+6m6s        Normal    Started              pod/ml-inference-978f7d5c4-5kdjd            Container started
+6m6s        Normal    Created              pod/ml-inference-978f7d5c4-m5b49            Container created
+6m6s        Normal    Started              pod/ml-inference-978f7d5c4-n26cw            Container started
+6m6s        Normal    Started              pod/ml-inference-978f7d5c4-m5b49            Container started
+6m6s        Normal    Created              pod/ml-inference-978f7d5c4-n26cw            Container created
+6m6s        Normal    Created              pod/ml-inference-978f7d5c4-5kdjd            Container created
+21s         Warning   Unhealthy            pod/ml-inference-978f7d5c4-5kdjd            Readiness probe failed: Traceback (most recent call last):...
+21s         Normal    Killing              pod/ml-inference-978f7d5c4-5kdjd            Stopping container ml-inference
+21s         Normal    SuccessfulDelete     replicaset/ml-inference-978f7d5c4           Deleted pod: ml-inference-978f7d5c4-m5b49
+21s         Normal    SuccessfulDelete     replicaset/ml-inference-978f7d5c4           Deleted pod: ml-inference-978f7d5c4-5kdjd
+21s         Normal    Killing              pod/ml-inference-978f7d5c4-m5b49            Stopping container ml-inference
+21s         Normal    SuccessfulRescale    horizontalpodautoscaler/ml-inference-keda   New size: 1; reason: All metrics below target
+21s         Normal    SuccessfulDelete     replicaset/ml-inference-978f7d5c4           Deleted pod: ml-inference-978f7d5c4-n26cw
+21s         Warning   Unhealthy            pod/ml-inference-978f7d5c4-m5b49            Readiness probe failed: Traceback (most recent call last):...
+21s         Warning   Unhealthy            pod/ml-inference-978f7d5c4-n26cw            Readiness probe failed: Traceback (most recent call last):...
+21s         Normal    Killing              pod/ml-inference-978f7d5c4-n26cw            Stopping container ml-inference
+21s         Normal    ScalingReplicaSet    deployment/ml-inference                     Scaled down replica set ml-inference-978f7d5c4 from 4 to 1

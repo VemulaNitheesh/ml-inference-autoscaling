@@ -1,0 +1,6 @@
+Method,Name,Error,Occurrences,First Seen,Last Seen
+POST,/predict,"ConnectTimeoutError(<HTTPConnection(host='192.168.49.2', port=30080) at 0x706b691a2e40>, 'Connection to 192.168.49.2 timed out. (connect timeout=None)')",1,2026-11-27T06:51:33Z,2026-11-27T06:51:33Z
+POST,/predict,"ConnectTimeoutError(<HTTPConnection(host='192.168.49.2', port=30080) at 0x706b6b370ad0>, 'Connection to 192.168.49.2 timed out. (connect timeout=None)')",1,2026-11-27T06:51:33Z,2026-11-27T06:51:33Z
+POST,/predict,"ConnectionRefusedError(111, 'Connection refused')",7,2026-11-27T06:45:19Z,2026-11-27T06:49:20Z
+POST,/predict,"ConnectTimeoutError(<HTTPConnection(host='192.168.49.2', port=30080) at 0x706b691f6cc0>, 'Connection to 192.168.49.2 timed out. (connect timeout=None)')",1,2026-11-27T06:47:36Z,2026-11-27T06:47:36Z
+POST,/predict,"ConnectTimeoutError(<HTTPConnection(host='192.168.49.2', port=30080) at 0x706b6922c740>, 'Connection to 192.168.49.2 timed out. (connect timeout=None)')",1,2026-11-27T06:51:33Z,2026-11-27T06:51:33Z

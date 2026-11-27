@@ -1,0 +1,78 @@
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"autoscaling/v2","kind":"HorizontalPodAutoscaler","metadata":{"annotations":{},"name":"ml-inference-cpu","namespace":"default"},"spec":{"behavior":{"scaleDown":{"stabilizationWindowSeconds":120}},"maxReplicas":4,"metrics":[{"resource":{"name":"cpu","target":{"averageUtilization":50,"type":"Utilization"}},"type":"Resource"}],"minReplicas":1,"scaleTargetRef":{"apiVersion":"apps/v1","kind":"Deployment","name":"ml-inference"}}}
+  creationTimestamp: "2026-11-26T16:37:44Z"
+  generation: 1
+  name: ml-inference-cpu
+  namespace: default
+  resourceVersion: "5768"
+  uid: 7e504ba6-e9ec-41d1-b88e-8c01a278292a
+spec:
+  behavior:
+    scaleDown:
+      policies:
+      - periodSeconds: 15
+        type: Percent
+        value: 100
+      selectPolicy: Max
+      stabilizationWindowSeconds: 120
+    scaleUp:
+      policies:
+      - periodSeconds: 15
+        type: Pods
+        value: 4
+      - periodSeconds: 15
+        type: Percent
+        value: 100
+      selectPolicy: Max
+      stabilizationWindowSeconds: 0
+  maxReplicas: 4
+  metrics:
+  - resource:
+      name: cpu
+      target:
+        averageUtilization: 50
+        type: Utilization
+    type: Resource
+  minReplicas: 1
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: ml-inference
+status:
+  conditions:
+  - lastTransitionTime: "2026-11-26T16:37:44Z"
+    message: recommended size matches current size
+    reason: ReadyForNewScale
+    status: "True"
+    type: AbleToScale
+  - lastTransitionTime: "2026-11-26T16:41:14Z"
+    message: the HPA was able to successfully calculate a replica count from cpu resource
+      utilization (percentage of request)
+    reason: ValidMetricFound
+    status: "True"
+    type: ScalingActive
+  - lastTransitionTime: "2026-11-26T16:49:00Z"
+    message: the desired count is within the acceptable range
+    reason: DesiredWithinRange
+    status: "False"
+    type: ScalingLimited
+  - lastTransitionTime: "2026-11-26T16:44:14Z"
+    message: the HPA controller did not scale the workload to zero
+    reason: NotScaledToZero
+    status: "False"
+    type: ScaledToZero
+  currentMetrics:
+  - resource:
+      current:
+        averageUtilization: 6
+        averageValue: 15m
+      name: cpu
+    type: Resource
+  currentReplicas: 1
+  desiredReplicas: 1
+  lastScaleTime: "2026-11-26T17:25:47Z"
+  observedGeneration: 1

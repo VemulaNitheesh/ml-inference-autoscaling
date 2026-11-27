@@ -1,0 +1,6 @@
+[2026-11-27 11:29:28,225] nitheeshvemula/INFO/locust.main: Starting Locust 2.47.0
+[2026-11-27 11:29:28,225] nitheeshvemula/INFO/locust.main: Run time limit set to 240 seconds
+[2026-11-27 11:29:28,226] nitheeshvemula/INFO/locust.runners: Ramping to 40 users at a rate of 4.00 per second
+[2026-11-27 11:29:37,237] nitheeshvemula/INFO/locust.runners: All users spawned: {"InferenceUser": 40} (40 total users)
+[2026-11-27 11:33:28,080] nitheeshvemula/INFO/locust.main: --run-time limit reached, shutting down
+[2026-11-27 11:33:28,167] nitheeshvemula/INFO/locust.main: Shutting down (exit code 0)

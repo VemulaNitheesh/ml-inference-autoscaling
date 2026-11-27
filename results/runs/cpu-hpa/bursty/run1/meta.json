@@ -1,0 +1,57 @@
+{
+  "scaler": "cpu-hpa",
+  "hpa_name": "ml-inference-cpu",
+  "load": "bursty",
+  "run": 1,
+  "slo_ms": 500,
+  "normal": {
+    "users": 40,
+    "spawn": 4,
+    "seconds": 240
+  },
+  "bursty": {
+    "base": 4,
+    "spike": 40,
+    "lead": 180,
+    "spike_s": 60,
+    "gap": 180,
+    "spikes": 3,
+    "tail": 180,
+    "spawn": 50
+  },
+  "sample_interval_s": 2.0,
+  "locust_started_epoch": 1795717220.854338,
+  "locust_finished_epoch": 1795718121.5694487,
+  "settled_epoch": 1795718348.9272316,
+  "locust_cmd": [
+    "/home/iiitb/ml-inference-autoscaling/.venv/bin/python3",
+    "-m",
+    "locust",
+    "-f",
+    "/home/iiitb/ml-inference-autoscaling/load/locustfile.py,/home/iiitb/ml-inference-autoscaling/results/runs/cpu-hpa/bursty/run1/request_logger.py,/home/iiitb/ml-inference-autoscaling/results/runs/cpu-hpa/bursty/run1/shape.py",
+    "--headless",
+    "-H",
+    "http://192.168.49.2:30080",
+    "--csv",
+    "/home/iiitb/ml-inference-autoscaling/results/runs/cpu-hpa/bursty/run1/locust",
+    "--csv-full-history",
+    "--html",
+    "/home/iiitb/ml-inference-autoscaling/results/runs/cpu-hpa/bursty/run1/locust_report.html",
+    "--logfile",
+    "/home/iiitb/ml-inference-autoscaling/results/runs/cpu-hpa/bursty/run1/locust.log",
+    "--exit-code-on-error",
+    "0"
+  ],
+  "expected": {
+    "min": 1,
+    "max": 4,
+    "iterations": "50",
+    "matrix_size": "256"
+  },
+  "versions": {
+    "locust": "locust 2.47.0 from /home/iiitb/ml-inference-autoscaling/.venv/lib/python3.12/site-packages/locust (Python 3.12.3)",
+    "kubectl": "Client Version: v1.35.10\nKustomize Version: v5.7.1",
+    "minikube": "minikube version: v1.39.0\ncommit: 7a9f6a841470a207de8cf4bafcccee0969d8ba10",
+    "helm": "v3.22.1+gd6c1a0e"
+  }
+}
