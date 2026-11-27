@@ -1,9 +1,0 @@
-prometheus:
-  url: http://monitoring-kube-prometheus-prometheus.monitoring.svc
-  port: 9090
-rules:
-  default: false
-  custom: []
-resources:
-  requests: {cpu: 50m, memory: 64Mi}
-  limits: {cpu: 200m, memory: 200Mi}

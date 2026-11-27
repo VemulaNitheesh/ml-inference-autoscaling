@@ -1,18 +1,17 @@
 # Python
-.venv/
-venv/
 __pycache__/
 *.py[cod]
-*.egg-info/
+.venv/
+venv/
+.pytest_cache/
 
-# Environment and secrets
+# Environment variables and secrets
 .env
 .env.*
-!.env.example
-*.pem
-*.key
-secrets.yaml
-kubeconfig
+
+# Generated results
+results/
+*.log
 
 # IDE
 .vscode/
@@ -20,13 +19,5 @@ kubeconfig
 
 # OS
 .DS_Store
-Thumbs.db
-
-# Temporary files
-*.log
-*.tmp
-.cache/
-
-# Generated Python artifacts
-.pytest_cache/
-.mypy_cache/
+*.backup
+*.backup

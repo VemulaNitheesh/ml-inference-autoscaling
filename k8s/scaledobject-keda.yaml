@@ -1,0 +1,46 @@
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: ml-inference-keda
+  namespace: default
+
+spec:
+  scaleTargetRef:
+    name: ml-inference
+
+  pollingInterval: 5
+  cooldownPeriod: 120
+
+  minReplicaCount: 1
+  maxReplicaCount: 4
+
+  advanced:
+    horizontalPodAutoscalerConfig:
+      name: ml-inference-keda
+      behavior:
+        scaleDown:
+          stabilizationWindowSeconds: 120
+          selectPolicy: Max
+          policies:
+            - type: Percent
+              value: 100
+              periodSeconds: 15
+        scaleUp:
+          stabilizationWindowSeconds: 0
+          selectPolicy: Max
+          policies:
+            - type: Pods
+              value: 4
+              periodSeconds: 15
+            - type: Percent
+              value: 100
+              periodSeconds: 15
+
+  triggers:
+    - type: prometheus
+      metricType: AverageValue
+      metadata:
+        serverAddress: http://prom-kube-prometheus-stack-prometheus.monitoring.svc.cluster.local:9090
+        metricName: inference_requests_in_flight
+        query: sum(inference_requests_in_flight{job="ml-inference"})
+        threshold: "5"

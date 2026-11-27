@@ -1,0 +1,104 @@
+{
+  "model_name": "breast_cancer_random_forest",
+  "algorithm": "RandomForestClassifier",
+  "dataset_name": "Breast Cancer Wisconsin Diagnostic Dataset",
+  "dataset_samples": 569,
+  "training_samples": 455,
+  "test_samples": 114,
+  "number_of_features": 30,
+  "feature_names": [
+    "mean radius",
+    "mean texture",
+    "mean perimeter",
+    "mean area",
+    "mean smoothness",
+    "mean compactness",
+    "mean concavity",
+    "mean concave points",
+    "mean symmetry",
+    "mean fractal dimension",
+    "radius error",
+    "texture error",
+    "perimeter error",
+    "area error",
+    "smoothness error",
+    "compactness error",
+    "concavity error",
+    "concave points error",
+    "symmetry error",
+    "fractal dimension error",
+    "worst radius",
+    "worst texture",
+    "worst perimeter",
+    "worst area",
+    "worst smoothness",
+    "worst compactness",
+    "worst concavity",
+    "worst concave points",
+    "worst symmetry",
+    "worst fractal dimension"
+  ],
+  "target_class_names": [
+    "malignant",
+    "benign"
+  ],
+  "class_distribution": {
+    "malignant": 212,
+    "benign": 357
+  },
+  "train_test_split": {
+    "test_size": 0.2,
+    "stratified": true,
+    "random_state": 42
+  },
+  "training_parameters": {
+    "n_estimators": 100,
+    "max_depth": null,
+    "random_state": 42,
+    "n_jobs": -1
+  },
+  "random_state": 42,
+  "evaluation_metrics": {
+    "accuracy": 0.956140350877193,
+    "precision_weighted": 0.9560729421281235,
+    "recall_weighted": 0.956140350877193,
+    "f1_weighted": 0.9560273762928302,
+    "confusion_matrix": [
+      [
+        39,
+        3
+      ],
+      [
+        2,
+        70
+      ]
+    ],
+    "classification_report": {
+      "malignant": {
+        "precision": 0.9512195121951219,
+        "recall": 0.9285714285714286,
+        "f1-score": 0.9397590361445783,
+        "support": 42.0
+      },
+      "benign": {
+        "precision": 0.958904109589041,
+        "recall": 0.9722222222222222,
+        "f1-score": 0.9655172413793104,
+        "support": 72.0
+      },
+      "accuracy": 0.956140350877193,
+      "macro avg": {
+        "precision": 0.9550618108920814,
+        "recall": 0.9503968253968254,
+        "f1-score": 0.9526381387619444,
+        "support": 114.0
+      },
+      "weighted avg": {
+        "precision": 0.9560729421281235,
+        "recall": 0.956140350877193,
+        "f1-score": 0.9560273762928302,
+        "support": 114.0
+      }
+    }
+  }
+}

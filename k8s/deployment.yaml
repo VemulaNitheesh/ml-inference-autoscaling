@@ -1,58 +1,48 @@
 apiVersion: apps/v1
 kind: Deployment
-
 metadata:
   name: ml-inference
   labels:
     app: ml-inference
-
 spec:
   replicas: 1
-
   selector:
     matchLabels:
       app: ml-inference
-
   template:
     metadata:
       labels:
         app: ml-inference
-
     spec:
       containers:
         - name: ml-inference
-
-          image: ml-inference:milestone4
-
-          imagePullPolicy: Never
-
+          image: ml-inference:v2
+          imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 8000
-
-          env:
-            - name: MAX_CONCURRENT_INFERENCES
-              value: "2"
-
+            - name: http
+              containerPort: 8000
           resources:
             requests:
-              cpu: 200m
+              cpu: 250m
               memory: 256Mi
-
             limits:
-              cpu: "1"
+              cpu: 500m
               memory: 512Mi
-
           readinessProbe:
-            httpGet:
-              path: /health
-              port: 8000
+            exec:
+              command:
+                - python
+                - -c
+                - "import json,sys,urllib.request; d=json.load(urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=2)); sys.exit(0 if d.get('status')=='healthy' else 1)"
             initialDelaySeconds: 5
             periodSeconds: 5
-
+            timeoutSeconds: 3
+            failureThreshold: 3
           livenessProbe:
             httpGet:
               path: /health
-              port: 8000
-            initialDelaySeconds: 15
+              port: http
+            initialDelaySeconds: 20
             periodSeconds: 10
-
+            timeoutSeconds: 3
+            failureThreshold: 3
